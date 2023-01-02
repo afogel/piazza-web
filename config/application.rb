@@ -11,6 +11,9 @@ module Piazza
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # i18n config 
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml,yaml}')]
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
