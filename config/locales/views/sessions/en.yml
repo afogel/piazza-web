@@ -3,6 +3,8 @@ en:
     new:
       title: Log In
       submit: Login
-  create:
-    success: You're logged in!
-    incorrect_details: The email or password was incorrect. Please try again.
+    create:
+      success: You're logged in!
+      incorrect_details: The email or password was incorrect. Please try again.
+    destroy:
+      success: You've logged out successfully!

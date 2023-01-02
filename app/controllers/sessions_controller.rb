@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   skip_authentication only: [:new, :create]
-  
+
   def new
   end
 
@@ -19,6 +19,14 @@ class SessionsController < ApplicationController
       render :new, status: :unprocessable_entity 
     end
   end 
+
+  def destroy
+    log_out
+
+    flash[:success] = t(".success")
+    cookies[:app_session] = nil
+    redirect_to root_path, status: :see_other
+  end
   
   private
   def login_params 
